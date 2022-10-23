@@ -1,0 +1,37 @@
+ @mixin centeredFlex($type: flex) {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+ }
+
+ 
+//  @mixin generateIcons(){
+//     @each $iconName in $iconList {
+//         .icon-#{iconName}{
+//             background-image: url();
+//         }
+//     }
+//  }
+
+
+// @include centeredFlex();
+
+//  $socialIcons: "facebook","twitter","instagram","linkedin";
+//  $techIcons: "";
+
+
+//  @include generateIcons($icons);
+//  @include generateIcons($techIcons);
+
+// &__item:nth-child(1)::before {
+//     background-image: url(/images/svg/antenna.svg);
+//   }
+//   &__item:nth-child(2)::before {
+//     background-image: url(/images/svg/clock.svg);
+//   }
+//   &__item:nth-child(3)::before {
+//     background-image: url(/images/svg/diagram.svg);
+//   }
+//   &__item:nth-child(4)::before {
+//     background-image: url(/images/svg/astronaut.svg);
+//   }

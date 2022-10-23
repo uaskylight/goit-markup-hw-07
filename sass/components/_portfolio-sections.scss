@@ -1,0 +1,89 @@
+
+    // section-portfolio 
+
+.section-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+  // work-portfolio
+
+.work-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__frame {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__overlame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(33, 150, 243, 0.9);
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform $transform-transform,
+          opacity $transform-transform;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 1.55;
+      padding: 63px 24px;
+      color: $container;
+    }
+
+    &__texticon {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      color: $primary-color;
+    }
+    &__job {
+      color:$secondary-color;
+      font-size: 16px;
+      line-height: 1.87;
+      margin-top: 4px;
+    }
+
+    &__link {
+    display: block;
+    text-decoration: none;
+    transition: box-shadow $transform-transform;
+  }
+
+  &__list:not(:nth-last-child(3n + 1)) {
+    margin-right: 30px;
+  }
+
+  &__list:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  &__list:hover &__overlame {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__hidden {
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

@@ -1,0 +1,213 @@
+    // modal
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    z-index: 2;
+    transition: opacity $transform-transform,
+    visibility $transform-transform;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  & .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+    transition: $transition-background-color;
+
+    &__text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        margin-bottom: 12px;
+        color: $primary-color;
+    }
+}
+
+.form-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    &__label {
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+      color: $secondary-color;
+      text-align: left;
+      margin-bottom: 4px;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 30px;
+        left: 19px;
+        fill:$primary-color;
+    }
+
+    &__input {
+        color: $secondary-color;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 11px 19px 11px 42px;
+        outline: none;
+    }
+
+    &__textarea {
+        border: 1px solid rgba(112, 80, 80, 0.2);
+        border-radius: 4px;
+        resize: none;
+        outline: none;
+      }
+
+    &__input:focus,
+    &__textarea:focus {
+        border: 1px solid $primary-btn-color;
+    }
+
+    &__input:focus + &__icon {
+        fill: $primary-btn-color;
+    }
+
+    &--bottom {
+        margin-bottom: 20px;
+    }
+    &__comment {
+        color:$secondary-color;
+        padding: 12px 16px;
+    }
+}
+
+.form-checkbox {
+  @include centeredFlex(inline-block);
+  // display: inline-block;
+  // align-items: center;
+  // justify-content: center;
+
+  &__close {
+      position: absolute;
+      @include centeredFlex();
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      top: 8px;
+      right: 8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $container;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition:background-color $transition-background-color,
+          background-color $transition-background-color;;
+      transform: scale(1);
+    }
+
+    &__close:hover {
+      fill: $primary-btn-color;
+      background-color:rgba(167, 165, 165, 0.1);
+      transform: scale(1.1);
+    }
+    &__close:focus {
+      
+      outline: 1px solid $primary-btn-color ;
+    }
+
+    &__btn {
+      @include centeredFlex();
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      min-width: 200px;
+      height: 50px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      border: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.87;
+      letter-spacing: 0.06em;
+      margin: 30px auto 0 auto;
+
+      background: $primary-btn-color;
+      color: $btn;
+
+      transition:background-color $transition-background-color;
+    }
+    &__btn:hover,
+    &__btn:focus {
+      background-color: $btn-secondary;
+      box-shadow: 0px 2px 2px 1px rgb(0 0 0 /12%);
+    }
+    &__btn:focus{
+      outline: 1px solid $primary-color;
+    }
+
+    &__hidden {
+      width: 1px;
+      height: 1px;
+      margin: -4px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    &__policytext {
+      text-decoration: underline;
+      margin-left: 4px;
+      color: $primary-btn-color;
+    }
+
+    &__hidden:checked + &__active {
+      background-size: contain;
+      background-color:$primary-btn-color;
+      background-origin: border-box;
+      border-color: $primary-btn-color;
+      transform: scale(1.2);
+    }
+
+    &__hidden:focus + &__active {
+      border: 1px solid $primary-btn-color;
+    }
+
+    &__policy {
+      @include centeredFlex();
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
+
+    &__active {
+      width: 15px;
+      height: 15px;
+      margin-right: 7px;
+      background-color: $container;
+      border: 1px solid $btn-prtf;
+      transition:$transform-transform;
+    }
+}
+
+
+

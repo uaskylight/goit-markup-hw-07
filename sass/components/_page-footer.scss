@@ -1,0 +1,99 @@
+    // footer
+
+.footer-page {
+    background-color: $footer;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__addressLinkForm {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+    // footer-address
+
+.footer-address {
+    margin-right: 90px;
+}
+
+    // address-list
+.address-list{
+
+    &:not(:first-child) {
+        margin-top: 9px;
+    }
+
+    &__fontsize {
+        font-style: normal;
+        line-height: 1.71;
+        color: $contact-footer;
+    }
+
+    &__cityColor {
+        color: $container;
+    }
+}
+
+    // footer-network
+
+.footer-network{
+    &__text {
+        margin-bottom: 20px;
+        font-weight: 700;
+        line-height: 1.14;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $container;
+    }
+    &__column {
+        display: flex;
+        gap: 10px;
+    }
+    &__svgColor {
+        color:$btn;
+    }
+}
+
+    // form
+
+.form{
+    margin-left: 93px;
+
+    &__title {
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $btn;
+    }
+}
+
+.form-footer {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 20px;
+
+    &__input {
+        font-size: 16px;
+        line-height: 1.25;
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: $bgr-color;
+        color: $btn;
+        margin: 0;
+        padding: 15px 16px;
+        outline: none;
+    }
+    &__input:focus {
+        border: 1px solid $primary-btn-color;
+    }
+    &__input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+

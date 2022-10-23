@@ -1,0 +1,270 @@
+// section-main
+
+.section-main {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: $background-hero;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero.jpg);
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    &__block {
+        display: block;
+        text-align: center;
+        max-width: 696px;
+    }
+    &__text {
+        margin-bottom: 30px;
+        color: $container;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-transform: uppercase;
+        letter-spacing: 0.06em
+    }
+}
+
+    // about-section
+    
+.about-section {
+    padding-top: 94px;
+}
+
+    // about
+
+.about{
+
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__frame {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    background-color: $our-team-nav-prtf;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  // &__item:nth-child(1)::before {
+  //   background-image: url(/images/svg/antenna.svg);
+  // }
+  // &__item:nth-child(2)::before {
+  //   background-image: url(/images/svg/clock.svg);
+  // }
+  // &__item:nth-child(3)::before {
+  //   background-image: url(/images/svg/diagram.svg);
+  // }
+  // &__item:nth-child(4)::before {
+  //   background-image: url(/images/svg/astronaut.svg);
+  // }
+
+  &__text {
+    font-weight: 700;
+    line-height: 1.14;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: $secondary-color;
+    line-height: 1.71;
+    margin-top: 10px;
+  }
+}
+  
+  // work-section
+
+.work-section {
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+  // work
+
+.work{
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    @include centeredFlex();
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 370px;
+    height: 70px;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $container;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+  // section-team
+
+.section-team {
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $our-team-nav-prtf;
+}
+
+  // our-team
+
+.our-team{
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $container;
+  }
+
+  &__frame {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }  
+  
+  &__textname {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  &__textjob {
+    color: $secondary-color;
+    font-size: 16px;
+    line-height: 1.18;
+  }
+
+  &__icons {
+    @include centeredFlex();
+    // display: flex;
+    // justify-content: center;
+    margin-top: 16px;
+    gap: 10px;
+  }
+}
+
+  // section-clients
+
+.section-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+  // clients
+
+.clients{
+  &__text {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    color: $primary-color;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    @include centeredFlex();
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    border-radius: 4px;
+    gap: 30px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $network;
+    color: $network;
+    transition: $transform-transform,
+      border-color $transform-transform;
+    }
+
+  &__link:hover,
+  &__link:focus {
+    border-color: $logo-web;
+    color: $logo-web;
+}
+  &__svg {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+    &:hover {
+      fill: currentColor;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

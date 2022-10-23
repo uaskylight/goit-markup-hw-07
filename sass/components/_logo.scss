@@ -1,0 +1,29 @@
+    // Photo
+
+.photo {
+    display: block;
+    max-width: 100%;
+}
+
+    // Logo
+
+.logo{
+    @include centeredFlex();
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    color: $logo-stydio-header;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+
+    &--blue{
+        color: $logo-web;
+    }
+    &--white {
+        margin-bottom: 20px;
+        color: $logo-footer;
+    }
+}
