@@ -24,6 +24,10 @@ ul {
     }
 }
 
+.link.current{
+    color: $primary-btn-color;
+}
+
 
 .visually-hidden {
     position: absolute;

@@ -121,13 +121,13 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       transition:background-color $transition-background-color,
           background-color $transition-background-color;;
-      transform: scale(1);
+      // transform: scale(1);
     }
 
     &__close:hover {
       fill: $primary-btn-color;
-      background-color:rgba(167, 165, 165, 0.1);
-      transform: scale(1.1);
+      // background-color:rgba(167, 165, 165, 0.1);
+      // transform: scale(1.1);
     }
     &__close:focus {
       
@@ -135,7 +135,7 @@
     }
 
     &__btn {
-      @include centeredFlex();
+      // @include centeredFlex();
       // display: flex;
       // align-items: center;
       // justify-content: center;
